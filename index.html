@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="background">
+    <section class="d-flex justify-content-center align-items-center">
+      <div class="container my-5 rounded-3 w-75 blur">
+        <div class="py-3">
+          <label class="text-color" for="productName">productName :</label>
+          <input class="form-control mb-3" type="text" id="productName" />
+          <label class="text-color" for="productPrice">productPrice :</label>
+          <input class="form-control mb-3" type="text" id="productPrice" />
+          <label class="text-color" for="productCategory"
+            >productCategory :</label
+          >
+          <input class="form-control mb-3" type="text" id="productCategory" />
+          <label class="text-color" for="productDesc">productDesc :</label>
+          <textarea
+            class="form-control mb-3"
+            type="text"
+            id="productDesc"
+          ></textarea>
+          <button
+            id="btn1"
+            class="a d-block rounded-2 w-100"
+            onclick="addproduct()"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Add product
+          </button>
+          <button
+            id="btn2"
+            onclick="updateProduct()"
+            class="a d-none rounded-2 w-100"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Update product
+          </button>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="w-75 d-flex flex-column justify-content-center text-center align-items-center ">
+            <div class="w-100">
+              <input
+                type="text"
+                oninput="searchProduct(this.value)" 
+                placeholder="Search Of Name"
+                class="form-control w-75 mx-auto mb-4"
+              />
+            </div>
+
+            <table class="table">
+              <thead>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Desc</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </thead>
+              <tbody id="tablebody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="j.s/main.js"></script>
+    <script src="j.s/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
